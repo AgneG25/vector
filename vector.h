@@ -23,11 +23,8 @@ public:
 
     vector() : vsize{ 0 }, array{ new T[vsize] }, maxsize{ 0 } {};
     vector(size_t sz) : vsize{ sz }, array{ new T[vsize] }, maxsize{ sz } {};
-   
     vector(size_t sz, T value) : vsize{ sz }, array{ new T[vsize] }, maxsize{ sz } { fill_n(array, sz, value); }
-
     ~vector(){ delete [] array; }
-
 
     vector& operator=(const vector& v) {
         if (&v == this) return *this; // Savęs priskyrimo aptikimas
@@ -51,27 +48,6 @@ public:
         array[vsize] = i;
         vsize++;
     }
-    
-        
-    /*void reserve(size_t n) 
-        {
-            if (maxsize < n) 
-            {
-                T *temp = new T[n];
-                for (auto i = 0; i < vsize; i++) {
-                    temp[i] = array[i];
-                }
-                delete[] array;
-                array = temp;
-                maxsize = n;
-                temp = nullptr;
-		    }
-	    }
-    vector(vector&& v) : vsize{ v.vsize }, array{ v.array }, maxsize{ v.maxsize } {
-        v.array = nullptr;
-        v.vsize = 0;
-        v.maxsize = 0;
-    }*/
 
     void pop_back () {
         if(vsize != 0)
