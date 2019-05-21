@@ -26,6 +26,17 @@ public:
     vector(size_t sz, T value) : vsize{ sz }, array{ new T[vsize] }, maxsize{ sz } { fill_n(array, sz, value); }
     ~vector(){ delete [] array; }
 
+    const bool operator == (const vector& other) const {
+		if (vsize == other.vsize && maxsize == other.maxsize) {
+			for (size_t i = 0; i < vsize; i++) {
+				if (other.array[i] != this->array[i])
+					return false;
+			}
+				return true;
+		}
+		return false;
+	}
+    
     vector& operator=(const vector& v) {
         if (&v == this) return *this; // Savęs priskyrimo aptikimas
 
