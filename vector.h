@@ -1,3 +1,4 @@
+
 #ifndef VECTOR_H
 #define VECTOR_H
 
@@ -24,6 +25,16 @@ public:
     vector() : vsize{ 0 }, array{ new T[vsize] }, maxsize{ 0 } {};
     vector(size_t sz) : vsize{ sz }, array{ new T[vsize] }, maxsize{ sz } {};
     vector(size_t sz, T value) : vsize{ sz }, array{ new T[vsize] }, maxsize{ sz } { fill_n(array, sz, value); }
+    vector (iterator first, iterator end) {
+        std::cout  << first << std::endl;
+        vsize = end - first; 
+        maxsize = end - first;
+        for (int i = 0; i < vsize; i++)
+            {
+                array[i] = *first;
+                first++;
+            } 
+    }
     ~vector(){ delete [] array; }
 
     const bool operator == (const vector& other) const {
