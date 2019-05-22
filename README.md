@@ -144,3 +144,11 @@ std::vector uztruko 1.55253sec
 
 Tiek mano self made vectoriuje, tiek `std::vector`, užpildant 100000000 elementų, įvyko po 27 atminties perskirstymus.
   
+### Fourth task
+
+Savo kurtą vektorių panaudojau OOP_3 realizuotoje programoje ir palyginau greitį, kai apdorojama informacija su 100000 studentų įrašų:
+
+```
+std::vector 0.050483732 s/n
+self made vector 0.059752957 s/n
+```
