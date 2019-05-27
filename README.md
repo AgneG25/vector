@@ -149,6 +149,15 @@ Tiek mano self made vectoriuje, tiek `std::vector`, užpildant 100000000 element
 Savo kurtą vektorių panaudojau OOP_3 realizuotoje programoje ir palyginau greitį, kai apdorojama informacija su 100000 studentų įrašų:
 
 ```
-std::vector 0.050483732 s/n
-self made vector 0.059752957 s/n
+Įrašymas į std::vector užtruko 6.43854 sec
+std::vector rūšiavimas užtruko 3.73962 sec
+std::vector išvedimas užtruko 3.41862 sec
+
+std::vector užtruko su int tipo duomenimis 0.0405364 sec
+
+Įrašymas į self made vector užtruko 10.4652 sec
+self made vector rūšiavimas užtruko 4.16053 sec
+self made vector išvedimas užtruko 3.51786 sec
+
+vec::vector užtruko su int tipo duomenimis 0.00298746sec
 ```
