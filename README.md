@@ -159,5 +159,5 @@ std::vector užtruko su int tipo duomenimis 0.0405364 sec
 self made vector rūšiavimas užtruko 4.16053 sec
 self made vector išvedimas užtruko 3.51786 sec
 
-vec::vector užtruko su int tipo duomenimis 0.00298746sec
+self made vector užtruko su int tipo duomenimis 0.00306236 sec
 ```
